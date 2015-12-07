@@ -1,0 +1,82 @@
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+html {
+	box-sizing: border-box;
+	@include font-size(1);
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+.decorative {
+		margin: 45px 0 30px;
+    padding: 0;
+    border: none;
+    border-top: 1px solid $color_medium-grey;
+    color: $color_medium-grey;
+    text-align: center;
+			 &::after {
+			    content: url('../../images/invader.png');
+			    display: inline-block;
+			    position: relative;
+			    top: -1.1em;
+			    font-size: 1.5em;
+			    padding: 0 0.25em;
+			    background: white;
+					border-radius: 50%;
+				}
+}
+
+ul, ol {
+	margin: 0 0 $base__space-unit ($base__space-unit * 2);
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: $base__space-unit;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 $base__space-unit $base__space-unit;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	margin: 0 0 $base__space-unit;
+	width: 100%;
+}

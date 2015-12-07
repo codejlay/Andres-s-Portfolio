@@ -43,12 +43,12 @@ wp-content/*
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #
 wp-content/plugins/*
-!wp-content/plugins/lrb-functionality/
-!wp-content/plugins/business-hours-widget/
+!wp-content/plugins/hide-default-posts.php
+!wp-content/plugins/ap-functionality/
 # Ignore everything in "themes" except the active theme. #
 # ========================================================== #
 wp-content/themes/*
-!wp-content/themes/leredbread/
+!wp-content/themes/andresportfolio/
 # Ignore packages #
 # =============== #
-wp-content/themes/leredbread/node_modules/
+wp-content/themes/andresportfolio/node_modules/

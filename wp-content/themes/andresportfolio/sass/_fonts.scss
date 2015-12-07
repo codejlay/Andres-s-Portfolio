@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'raleway';
+    src: url('../../fonts/raleway-regular.ttf');
+    src: url('../../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-regular.woff') format('woff'),
+         url('../..fonts/raleway-regular.ttf') format('truetype'),
+         url('../../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('../../fonts/raleway-bold.ttf');
+    src: url('../../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-bold.woff') format('woff'),
+         url('../../fonts/raleway-bold.ttf') format('truetype'),
+         url('../fonts/raleway-bold.svg#raleway-bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'archistico';
+    src: url('../../fonts/archistico-regular.ttf');
+    src: url('../../fonts/archistico-regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/archistico-regular.woff') format('woff'),
+         url('../..fonts/archistico-regular.ttf') format('truetype'),
+         url('../../fonts/archistico-regular.svg#archistico-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'archistico';
+    src: url('../../fonts/archistico-bold.ttf');
+    src: url('../../fonts/archistico-bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/archistico-bold.woff') format('woff'),
+         url('../../fonts/archistico-bold.ttf') format('truetype'),
+         url('../fonts/archistico-bold.svg#archistico-bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}

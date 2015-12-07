@@ -1,0 +1,30 @@
+.site-footer{
+  @include container;
+  display: flex;
+  margin-top: 30px;
+}
+
+.contact-info{
+  padding: 1rem 0 0.5rem;
+  width: 90%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  .fa{
+      width: 60px;
+      height: 60px;
+      background: $color_light-grey;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      box-sizing: content-box;
+      padding: 5px;
+      border: 2px solid $color_medium-grey;
+      border-radius: 50%;
+  }
+  @include bp(tablet) {
+    width: 60%;
+  }
+}
