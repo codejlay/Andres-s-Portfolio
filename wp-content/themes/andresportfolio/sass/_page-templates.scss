@@ -49,6 +49,7 @@ body{
   display: flex;
   flex-flow: column wrap;
   align-items: stretch;
+  margin: 20px 0;
   @include bp(tablet) {
     flex-flow: row wrap;
     justify-content: space-between;
@@ -139,14 +140,17 @@ body{
 }
 
 .feature1{
+  width: 100%;
   text-align: center;
-  min-height: 400px;
-  margin-bottom: 20px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include bp(tablet) {
-    margin-bottom: 0px;
+    margin: 20px 0;
   }
   img{
-    width: 60%;
+    width: 95%;
     min-width: 250px;
   }
 }
@@ -154,30 +158,29 @@ body{
 
 .feature2{
   width: 80%;
-  display: flex;
-  min-height: 400px;
+  position: relative;
+  min-height: 350px;
   @include bp(tablet) {
     width: 100%;
   }
-  align-items: flex-start;
-  justify-content: space-between;
-  padding-bottom: 50px;
 }
 
 .feature2 img{
-  width:60%;
   min-width: 175px;
   &:first-child{
-    max-width: 240px;
-    align-self: flex-end;
+    width:60%;
+    max-width: 295px;
+    position: absolute;
     z-index: 100;
-    margin-right: -20px;
-    margin-bottom: -20px;
+    left: 0;
+    bottom: 0;
   }
   &:nth-child(2){
-    max-width: 280px;
-    margin-left: -30%;
-    z-index: 10;
+    max-width: 245px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
@@ -186,12 +189,6 @@ body{
   min-height: 400px;
   text-align: center;
   position: relative;
-  @include bp(tablet) {
-    margin-top: 50px;
-  }
-  @include bp(desktop) {
-    margin-top: 0px;
-  }
 }
 
 .feature3 img{

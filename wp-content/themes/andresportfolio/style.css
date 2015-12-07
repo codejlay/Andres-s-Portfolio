@@ -277,9 +277,9 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   color: black; }
 
-h1 a, h2, h3 {
+h2, h3 {
   transition: color .5s ease-in-out; }
-  h1 a:hover, h2:hover, h3:hover {
+  h2:hover, h3:hover {
     color: #FA1041; }
 
 h1 {
@@ -993,7 +993,8 @@ body .site-content {
           flex-flow: column wrap;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch; }
+          align-items: stretch;
+  margin: 20px 0; }
   @media (min-width: 667px) {
     .project-wrapper {
       -webkit-flex-flow: row wrap;
@@ -1092,60 +1093,54 @@ body .site-content {
     border: 2px solid #979797; }
 
 .feature1 {
+  width: 100%;
   text-align: center;
-  min-height: 400px;
-  margin-bottom: 20px; }
+  min-height: 300px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media (min-width: 667px) {
     .feature1 {
-      margin-bottom: 0px; } }
+      margin: 20px 0; } }
   .feature1 img {
-    width: 60%;
+    width: 95%;
     min-width: 250px; }
 
 .feature2 {
   width: 80%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 400px;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 50px; }
+  position: relative;
+  min-height: 350px; }
   @media (min-width: 667px) {
     .feature2 {
       width: 100%; } }
 
 .feature2 img {
-  width: 60%;
   min-width: 175px; }
   .feature2 img:first-child {
-    max-width: 240px;
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
+    width: 60%;
+    max-width: 295px;
+    position: absolute;
     z-index: 100;
-    margin-right: -20px;
-    margin-bottom: -20px; }
+    left: 0;
+    bottom: 0; }
   .feature2 img:nth-child(2) {
-    max-width: 280px;
-    margin-left: -30%;
-    z-index: 10; }
+    max-width: 245px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0; }
 
 .feature3 {
   width: 100%;
   min-height: 400px;
   text-align: center;
   position: relative; }
-  @media (min-width: 667px) {
-    .feature3 {
-      margin-top: 50px; } }
-  @media (min-width: 950px) {
-    .feature3 {
-      margin-top: 0px; } }
 
 .feature3 img:first-child {
   width: 35%;
