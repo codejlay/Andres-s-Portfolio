@@ -10,6 +10,10 @@
   @include bp(desktop) {
     height: 600px;
   }
+  @include bp(xldesktop) {
+    height: 700px;
+  }
+
 }
 
 body:not(.home) .site-content{
@@ -29,7 +33,7 @@ body:not(.home) .site-content{
   }
   ul a{
     padding: 2px 7px;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     @include bp(tablet) {
       font-size: 1.2rem;
     }
@@ -44,7 +48,8 @@ body:not(.home) .site-content{
   background: white;
   opacity: 0.95;
   border-top: 5px solid $color_medium-grey;
-  border-bottom: 3px solid $color_medium-grey;
+  border-bottom: 2.5px solid $color_medium-grey;
+  box-shadow: 3px 1px 15px;
   a{
     text-decoration: none;
     color: black;
@@ -79,6 +84,10 @@ body:not(.home) .site-content{
   a{
     text-decoration: none;
     color: black;
+    transition: color .5s ease-in-out;
+      &:hover{
+        color: $color_red;
+      }
   }
 }
 
@@ -103,24 +112,28 @@ body:not(.home) .site-content{
   }
 }
 
-.current-menu-item{
+.current-menu-item, .current-page-ancestor{
   &:first-child{
+    font-weight: bold;
     border-left: 3px solid $color_pink;
     border-bottom: 3px solid $color_pink;
   }
   &:nth-child(2){
+    font-weight: bold;
     border-top: 3px solid $color_pink;
     border-right: 3px solid $color_pink;
   }
 }
 
 .fixed-nav{
-  .current-menu-item{
+  .current-menu-item,.current-page-ancestor{
     &:first-child{
+      font-weight: bold;
       border-left: 3px solid $color_red;
       border-bottom: 3px solid $color_red;
     }
     &:nth-child(2){
+      font-weight: bold;
       border-top: 3px solid $color_red;
       border-right: 3px solid $color_red;
     }

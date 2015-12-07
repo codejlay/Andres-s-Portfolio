@@ -110,4 +110,3 @@ class Hide_Default_Posts {
 }
 ​
 new Hide_Default_Posts();
-?>

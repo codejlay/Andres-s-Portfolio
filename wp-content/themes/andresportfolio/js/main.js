@@ -53,7 +53,7 @@ jQuery(function ($)  {
   var circle = $('.circle'),
   skill = $('.skill-name'),
   circleBox = $('.circle-box'),
-  checkPoint = $('.skill-list'),
+  checkPoint = $('.skill-grid'),
   inited = false;
 
   skill.hide();

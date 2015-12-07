@@ -1,7 +1,8 @@
 .site-footer{
   @include container;
+  margin: 50px auto;
   display: flex;
-  margin-top: 30px;
+  justify-content: center;
 }
 
 .contact-info{
@@ -11,18 +12,22 @@
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 3rem;
   .fa{
-      width: 60px;
-      height: 60px;
+      font-size: 2rem;
+      width: 45px;
+      height: 45px;
       background: $color_light-grey;
       display: flex;
       justify-content:center;
       align-items:center;
       box-sizing: content-box;
-      padding: 5px;
+      padding: 3.3px;
       border: 2px solid $color_medium-grey;
       border-radius: 50%;
+      @include bp(tablet) {
+        font-size: 2.4rem;
+        padding: 6px;
+      }
   }
   @include bp(tablet) {
     width: 60%;

@@ -50,6 +50,12 @@ get_header(); ?>
 					<span class="skill-name">Illustrator</span>
 				</div>
 				<div class="skill">
+					<div class="circle" data-value="0.6">
+						<div class='circle-box'><img src="<?php echo get_template_directory_uri();?>/images/photoshop.png" alt="Photoshop Logo" /></div>
+					</div>
+					<span class="skill-name">Photoshop</span>
+				</div>
+				<div class="skill">
 					<div class="circle" data-value="0.5">
 						<div class='circle-box'><img src="<?php echo get_template_directory_uri();?>/images/html5.png" alt="HTML5 Logo" /></div>
 					</div>

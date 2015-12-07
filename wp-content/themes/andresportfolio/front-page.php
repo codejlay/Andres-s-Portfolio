@@ -51,7 +51,7 @@ get_header(); ?>
 								$shortIntro = wp_trim_words( $intro, $num_words = 50, $more = '… ' );?>
 								<p class="overview-intro"><?php echo $shortIntro; ?></p>
 
-								<button><a href="<?php echo get_permalink();?>">Read more</a></button>
+								<a href="<?php echo get_permalink();?>"><button>Read more</button></a>
 							</div>
 						</div>
 						<hr class="decorative">

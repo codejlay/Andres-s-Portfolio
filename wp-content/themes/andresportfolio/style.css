@@ -277,6 +277,11 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   color: black; }
 
+h1 a, h2, h3 {
+  transition: color .5s ease-in-out; }
+  h1 a:hover, h2:hover, h3:hover {
+    color: #FA1041; }
+
 h1 {
   font-size: 1.1rem;
   margin-bottom: 0; }
@@ -285,7 +290,7 @@ h1 {
       font-size: 2.3rem; } }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1.6rem 0; }
   @media (min-width: 667px) {
     h2 {
@@ -300,7 +305,7 @@ h3 {
 
 .site-description {
   margin-top: 0px;
-  font-size: 0.6rem; }
+  font-size: 0.7rem; }
   @media (min-width: 667px) {
     .site-description {
       font-size: 1rem; } }
@@ -680,6 +685,9 @@ a {
   @media (min-width: 950px) {
     .home .site-header {
       height: 600px; } }
+  @media (min-width: 1200px) {
+    .home .site-header {
+      height: 700px; } }
 
 body:not(.home) .site-content {
   padding-top: 130px; }
@@ -702,7 +710,7 @@ body:not(.home) .site-content {
     color: #FFCBD8; }
   .main-navigation ul a {
     padding: 2px 7px;
-    font-size: 0.9rem; }
+    font-size: 0.75rem; }
     @media (min-width: 667px) {
       .main-navigation ul a {
         font-size: 1.2rem; } }
@@ -715,7 +723,8 @@ body:not(.home) .site-content {
   background: white;
   opacity: 0.95;
   border-top: 5px solid #979797;
-  border-bottom: 3px solid #979797; }
+  border-bottom: 2.5px solid #979797;
+  box-shadow: 3px 1px 15px; }
   .fixed-nav a {
     text-decoration: none;
     color: black; }
@@ -752,7 +761,10 @@ body:not(.home) .site-content {
   bottom: 0; }
   .home .home-site-branding a {
     text-decoration: none;
-    color: black; }
+    color: black;
+    transition: color .5s ease-in-out; }
+    .home .home-site-branding a:hover {
+      color: #FA1041; }
 
 .menu-menu-1-container {
   width: 40%;
@@ -782,19 +794,23 @@ body:not(.home) .site-content {
     .menu li {
       margin-left: 10vw; } }
 
-.current-menu-item:first-child {
+.current-menu-item:first-child, .current-page-ancestor:first-child {
+  font-weight: bold;
   border-left: 3px solid #FFCBD8;
   border-bottom: 3px solid #FFCBD8; }
 
-.current-menu-item:nth-child(2) {
+.current-menu-item:nth-child(2), .current-page-ancestor:nth-child(2) {
+  font-weight: bold;
   border-top: 3px solid #FFCBD8;
   border-right: 3px solid #FFCBD8; }
 
-.fixed-nav .current-menu-item:first-child {
+.fixed-nav .current-menu-item:first-child, .fixed-nav .current-page-ancestor:first-child {
+  font-weight: bold;
   border-left: 3px solid #FA1041;
   border-bottom: 3px solid #FA1041; }
 
-.fixed-nav .current-menu-item:nth-child(2) {
+.fixed-nav .current-menu-item:nth-child(2), .fixed-nav .current-page-ancestor:nth-child(2) {
+  font-weight: bold;
   border-top: 3px solid #FA1041;
   border-right: 3px solid #FA1041; }
 
@@ -802,10 +818,13 @@ body:not(.home) .site-content {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  margin: 50px auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .contact-info {
   padding: 1rem 0 0.5rem;
@@ -821,11 +840,11 @@ body:not(.home) .site-content {
           justify-content: space-between;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  font-size: 3rem; }
+          align-items: center; }
   .contact-info .fa {
-    width: 60px;
-    height: 60px;
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
     background: #D8D8D8;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -837,9 +856,13 @@ body:not(.home) .site-content {
         -ms-flex-align: center;
             align-items: center;
     box-sizing: content-box;
-    padding: 5px;
+    padding: 3.3px;
     border: 2px solid #979797;
     border-radius: 50%; }
+    @media (min-width: 667px) {
+      .contact-info .fa {
+        font-size: 2.4rem;
+        padding: 6px; } }
   @media (min-width: 667px) {
     .contact-info {
       width: 60%; } }
@@ -910,8 +933,7 @@ object {
 body .site-content {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
-  text-align: justify; }
+  width: 90%; }
 
 /* Contect Page */
 .entry-content {
@@ -931,19 +953,16 @@ body .site-content {
 /* Front page */
 .project-list {
   width: 100%;
+  background: red;
   margin-left: 0px;
   padding-left: 0px; }
   .project-list hr {
     width: 100%; }
   .project-list h3 {
     font-family: "archistico";
-    font-weight: normal;
+    font-weight: lighter;
     font-size: 1.5rem;
-    margin-bottom: 1.4rem;
-    color: black;
-    transition: color .5s ease-in-out; }
-    .project-list h3:hover {
-      color: #FA1041; }
+    margin-bottom: 1.4rem; }
     @media (min-width: 667px) {
       .project-list h3 {
         padding-left: 50px;
@@ -962,6 +981,8 @@ body .site-content {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    .project-list li:last-child hr {
+      display: none; }
 
 .project-wrapper {
   width: 100%;
@@ -1009,7 +1030,7 @@ body .site-content {
       left: 0;
       bottom: -10px;
       height: 1px;
-      width: 175px;
+      width: 159px;
       border-bottom: 1px solid #FA1041;
       margin-bottom: 10px; }
   .project-overview .overview-intro {
@@ -1023,9 +1044,6 @@ body .site-content {
       .project-overview .overview-intro {
         line-height: 2.2rem; } }
   .project-overview button {
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
     height: 50px;
     width: 150px;
     border: none;
@@ -1034,22 +1052,21 @@ body .site-content {
     border-radius: 0px;
     background: #FA1041;
     font-size: 1.15rem;
-    transition: opacity .5s ease-in-out; }
+    color: white;
+    transition: all .5s ease-in-out; }
+    .project-overview button:hover {
+      opacity: 0.7;
+      color: black;
+      font-weight: bold; }
+  .project-overview a {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
     @media (min-width: 667px) {
-      .project-overview button {
+      .project-overview a {
         -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
                 align-self: flex-end; } }
-    .project-overview button a {
-      width: 100%;
-      text-decoration: none;
-      color: white;
-      transition: all .5s ease-in-out; }
-    .project-overview button:hover {
-      opacity: 0.7; }
-      .project-overview button:hover a {
-        color: black;
-        font-weight: bold; }
 
 .project-overview p {
   margin-bottom: 20px; }
@@ -1072,9 +1089,12 @@ body .site-content {
   @media (min-width: 667px) {
     .project-features {
       width: 44%; } }
+  .project-features img {
+    border: 2px solid #979797; }
 
 .feature1 {
   text-align: center;
+  min-height: 400px;
   margin-bottom: 20px; }
   @media (min-width: 667px) {
     .feature1 {
@@ -1088,6 +1108,7 @@ body .site-content {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 400px;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1117,6 +1138,7 @@ body .site-content {
 
 .feature3 {
   width: 100%;
+  min-height: 400px;
   text-align: center;
   position: relative; }
   @media (min-width: 667px) {
@@ -1187,7 +1209,7 @@ body .site-content {
       -ms-flex-pack: center;
           justify-content: center; }
   .skill-grid .skill {
-    width: 200px;
+    width: 150px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1195,16 +1217,23 @@ body .site-content {
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
     text-align: center;
-    margin: 20px 0; }
+    margin: 20px 2vw; }
+    @media (min-width: 667px) {
+      .skill-grid .skill {
+        width: 200px; } }
 
 .circle {
   position: relative; }
   .circle .circle-box {
     position: absolute;
     top: 25px;
-    left: 65px;
+    left: 40px;
     width: 70px;
     height: 70px; }
+    @media (min-width: 667px) {
+      .circle .circle-box {
+        top: 25px;
+        left: 65px; } }
     .circle .circle-box img {
       width: 100%;
       border-radius: 10px; }
@@ -1263,7 +1292,7 @@ body .site-content {
 
 .gallery-large img {
   width: 100%;
-  margin: 10px; }
+  margin: 10px 0; }
   @media (min-width: 667px) {
     .gallery-large img {
       margin: 10px 2vw;
@@ -1274,10 +1303,10 @@ body .site-content {
   font-weight: bold; }
 
 .endnote img {
-  width: 25%; }
+  width: 20%; }
   @media (min-width: 667px) {
     .endnote img {
-      width: 15%; } }
+      width: 10%; } }
 
 /* Contact Page */
 .wpcf7 {
@@ -1400,7 +1429,7 @@ body .site-content {
 
 .project-gallery img {
   width: auto;
-  height: 50vw;
+  height: 60vw;
   margin: 10px;
   margin: 10px; }
   @media (min-width: 667px) {
