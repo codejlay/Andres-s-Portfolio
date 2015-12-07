@@ -26,21 +26,21 @@ get_header(); ?>
 									if ($count==1):?>
 											<div class="feature1">
 													<?php foreach ((array) $features as $feature) :
-															echo wp_get_attachment_image($feature['proj_image'], 'medium');
+															echo wp_get_attachment_image($feature['proj_image'], 'large');
 														endforeach;?>
 											</div>
 										<?php endif;
 									if ($count==2):?>
 												<div class="feature2">
 														<?php foreach ((array) $features as $feature) :
-																echo wp_get_attachment_image($feature['proj_image'], 'medium');
+																echo wp_get_attachment_image($feature['proj_image'], 'large');
 															endforeach;?>
 												</div>
 										<?php endif;
 									if ($count==3):?>
 												<div class="feature3">
 														<?php foreach ((array) $features as $feature) :
-																echo wp_get_attachment_image($feature['proj_image'], 'medium');
+																echo wp_get_attachment_image($feature['proj_image'], 'large');
 															endforeach;?>
 												</div>
 									<?php endif;?>
