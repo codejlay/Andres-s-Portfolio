@@ -27,6 +27,9 @@ function ap_redirect() {
 	if ( is_post_type_archive('project') ) {
 		wp_redirect( home_url(),301);
 		exit;
+	} if (is_404()){
+		wp_redirect( home_url(),301);
+		exit;
 	}
 }
 add_action( 'template_redirect', 'ap_redirect' );

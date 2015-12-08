@@ -59,7 +59,7 @@ gulp.task('browser-sync', function() {
    ];
 
     browserSync.init(files, {
-        proxy: 'localhost:8888/andres-portfolio/',
+        proxy: 'localhost:8080/andres-review/',
     });
 });
 
