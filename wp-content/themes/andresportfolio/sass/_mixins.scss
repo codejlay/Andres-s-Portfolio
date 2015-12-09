@@ -23,17 +23,17 @@ $xlarge-breakpoint: 1200px;
 
 
 @mixin bp($point) {
-  $bp-tablet: "(min-width: #{$small-breakpoint})";
+  	$bp-tablet: "(min-width: #{$small-breakpoint})";
 	$bp-desktop: "(min-width: #{$large-breakpoint})";
 	$bp-xldesktop: "(min-width: #{$xlarge-breakpoint})";
 
 
 	@if $point == tablet {
-    @media #{$bp-tablet} { @content; }
+	@media #{$bp-tablet} { @content; }
   }
 
-  @if $point == desktop {
-    @media #{$bp-desktop} { @content; }
+	@if $point == desktop {
+	@media #{$bp-desktop} { @content; }
   }
 
 	@if $point == xldesktop {

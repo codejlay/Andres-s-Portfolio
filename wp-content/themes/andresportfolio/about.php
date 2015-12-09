@@ -78,69 +78,69 @@ get_header(); ?>
 		if ($first) :
 				$first = false;
 		?>
-				<hr class="decorative">
-				<div class="about-section about-display">
-					<h2><?php echo $section['section_name']?></h2>
-					<?php echo $section['section_content'];?>
+			<hr class="decorative">
+			<div class="about-section about-display">
+				<h2><?php echo $section['section_name']?></h2>
+				<?php echo $section['section_content'];?>
 
-					<?php
-						if ( array_key_exists( 'section_gallery', $section ) ) :
-					?>
-					<div class="gallery-large">
-					<?php
-						foreach ((array)$section['section_gallery'] as $sectionGallery) :
-							echo wp_get_attachment_image($sectionGallery['section_image'], 'large');
-						endforeach; endif; ?>
-					</div>
-					<?php
-						if ( array_key_exists( 'section_parts', $section ) ) :
-						foreach ((array) $section['section_parts'] as $sectionPart) :
-					?>
-								<div class="section-part about-display">
-									<h3><?php echo $sectionPart['part_name']?></h3>
-									<div class="gallery-large">
-										<?php
-										foreach ((array)$sectionPart['part_gallery'] as $partGallery):
-												echo wp_get_attachment_image($partGallery['part_image'], 'large');;
-										endforeach;
-										?>
-									</div>
-									<?php echo $sectionPart['part_content'];?>
-								</div>
-					<?php endforeach; endif; ?>
+				<?php
+					if ( array_key_exists( 'section_gallery', $section ) ) :
+				?>
+				<div class="gallery-large">
+				<?php
+					foreach ((array)$section['section_gallery'] as $sectionGallery) :
+						echo wp_get_attachment_image($sectionGallery['section_image'], 'large');
+					endforeach; endif; ?>
 				</div>
-		<?php else: ?>
-					<hr class="decorative">
-					<div class="about-section about-display">
-						<h2><?php echo $section['section_name']?></h2>
-						<?php echo $section['section_content'];?>
-
-						<?php
-							if ( array_key_exists( 'section_gallery', $section ) ) :
-						?>
-						<div class="gallery-thumbnail">
-						<?php
-							foreach ((array)$section['section_gallery'] as $sectionGallery) :
-								echo wp_get_attachment_image($sectionGallery['section_image'], 'thumbnail');
-							endforeach; endif; ?>
+				<?php
+					if ( array_key_exists( 'section_parts', $section ) ) :
+					foreach ((array) $section['section_parts'] as $sectionPart) :
+				?>
+					<div class="section-part about-display">
+						<h3><?php echo $sectionPart['part_name']?></h3>
+						<div class="gallery-large">
+							<?php
+							foreach ((array)$sectionPart['part_gallery'] as $partGallery):
+									echo wp_get_attachment_image($partGallery['part_image'], 'large');;
+							endforeach;
+							?>
 						</div>
-						<?php
-							if ( array_key_exists( 'section_parts', $section ) ) :
-							foreach ((array) $section['section_parts'] as $sectionPart) :
-						?>
-									<div class="section-part about-display">
-										<h3><?php echo $sectionPart['part_name']?></h3>
-										<div class="gallery-thumbnail">
-											<?php
-											foreach ((array)$sectionPart['part_gallery'] as $partGallery):
-													echo wp_get_attachment_image($partGallery['part_image'], 'thumbnail');;
-											endforeach;
-											?>
-										</div>
-										<?php echo $sectionPart['part_content'];?>
-									</div>
-						<?php endforeach; endif; ?>
+						<?php echo $sectionPart['part_content'];?>
 					</div>
+				<?php endforeach; endif; ?>
+			</div>
+		<?php else: ?>
+			<hr class="decorative">
+			<div class="about-section about-display">
+				<h2><?php echo $section['section_name']?></h2>
+				<?php echo $section['section_content'];?>
+
+				<?php
+					if ( array_key_exists( 'section_gallery', $section ) ) :
+				?>
+				<div class="gallery-thumbnail">
+				<?php
+					foreach ((array)$section['section_gallery'] as $sectionGallery) :
+						echo wp_get_attachment_image($sectionGallery['section_image'], 'thumbnail');
+					endforeach; endif; ?>
+				</div>
+				<?php
+					if ( array_key_exists( 'section_parts', $section ) ) :
+					foreach ((array) $section['section_parts'] as $sectionPart) :
+				?>
+					<div class="section-part about-display">
+						<h3><?php echo $sectionPart['part_name']?></h3>
+						<div class="gallery-thumbnail">
+							<?php
+							foreach ((array)$sectionPart['part_gallery'] as $partGallery):
+									echo wp_get_attachment_image($partGallery['part_image'], 'thumbnail');;
+							endforeach;
+							?>
+						</div>
+						<?php echo $sectionPart['part_content'];?>
+					</div>
+				<?php endforeach; endif; ?>
+			</div>
 		<?php endif; endforeach;?>
 		<div class="endnote about-display">
 			<p>Thank You for Reading!</p>

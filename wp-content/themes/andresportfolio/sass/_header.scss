@@ -85,9 +85,9 @@ body:not(.home) .site-content{
     text-decoration: none;
     color: black;
     transition: color .5s ease-in-out;
-      &:hover{
-        color: $color_red;
-      }
+    &:hover{
+      color: $color_red;
+    }
   }
 }
 
